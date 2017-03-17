@@ -47,6 +47,15 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 NOTE:
   The Truetype font file VeraBd.ttf is copyright by Bitstream Inc. 
   See vera_copyright.txt for more information.
+  
+  
+CHANGES:
+
+- 170219 merged "VNStat Live Monitoring" by (https://github.com/bjd/vnstat-php-frontend/issues/5)
+- 170219 added option to config.php to turn live monitor on/off
+- 170219 added modified dark theme: "dark2"
+- 170219 added language file "cust.php" (en) whichm uses $L['Page top']
+
 
 
 
