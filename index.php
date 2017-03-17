@@ -33,6 +33,7 @@
         global $iface, $page, $graph, $script, $style;
         global $iface_list, $iface_title;
         global $page_list, $page_title;
+        global $live_monitor;
 
         $p = "&amp;graph=$graph&amp;style=$style";
 
@@ -54,12 +55,22 @@
                 print $if;
             }
             print "</a>";
+            print "<br><br>";
             print "<ul class=\"page\">\n";
             foreach ($page_list as $pg)
             {
                 print "<li class=\"page\"><a href=\"$script?if=$if$p&amp;page=$pg\">".$page_title[$pg]."</a></li>\n";
             }
             print "</ul></li>\n";
+
+            if ($live_monitor)
+            {
+                print "<script type='text/javascript'>var $if = new LiveMonitor('$if', '" . T('Stop Live') . "');
+                jQuery(document).ready(function() { $if.monitor(); });</script>";
+                print "<div id='live$if'></div>";
+            }
+            
+            print "</li>\n";
         }
         print "</ul>\n";
     }
@@ -80,10 +91,10 @@
         {
             $ui++;
             $scale = $scale / 1024;
+        }
 
-            if ($custom_size && $units[$ui] == $byte_notation) {
-                break;
-            }
+        if ($custom_size && $units[$ui] == $byte_notation) {
+            break;
         }
 
         return sprintf("%0.2f %s", ($kb/$scale),$units[$ui]);
@@ -174,8 +185,11 @@
 <head>
   <title>vnStat - PHP frontend</title>
   <link rel="stylesheet" type="text/css" href="themes/<?php echo $style ?>/style.css"/>
+  <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+  <script type="text/javascript" src="js/vnstat.js"></script>
 </head>
 <body>
+<?php print T('Page top');?>
 
 <div id="wrap">
   <div id="sidebar"><?php write_side_bar(); ?></div>
@@ -209,7 +223,7 @@
     }
     ?>
     </div>
-    <div id="footer"><a href="http://www.sqweek.com/">vnStat PHP frontend</a> 1.5.2 - &copy;2006-2011 Bjorge Dijkstra (bjd _at_ jooz.net)</div>
+    <div id="footer"><a href="http://www.sqweek.com/">vnStat PHP frontend</a> 1.5.2 - &copy;2006-2017 Bjorge Dijkstra (bjd _at_ jooz.net) et al</div>
   </div>
 </div>
 

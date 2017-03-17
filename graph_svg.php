@@ -152,7 +152,7 @@
 	svg_group_end();
 
 	// draw title
-	$text = T('Traffic data for')." $iface";
+	$text = T('Traffic data for svg')." $iface";
 	svg_text($iw / 2, ($ytm / 2), $text, array( 'stroke' => 'none', 'fill' => $cl['text']['rgb'],'stroke-width' => 0, 'font-family' => SVG_FONT, 'font-weight' => 'bold', 'text-anchor' => 'middle' ));
     }
 

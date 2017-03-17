@@ -1,5 +1,13 @@
 <?php
 
+// live monitoring
+$L['Reception'] = 'Réception';
+$L['Transmission'] = 'Transmission';
+$L['Live monitoring started on interface '] = 'La surveillance en direct a commencé sur l\'interface ';
+$L['Live monitoring not running on interface '] = 'La surveillance en direct n\'est pas en cours d\'exécution sur l\'interface ';
+$L['Start Live'] = 'Démarrer le Live';
+$L['Stop Live'] = 'Arrêter le Live';
+
 // sidebar labels
 $L['summary'] = 'Sommaire';
 $L['hours'] = 'Heures';
@@ -20,12 +28,12 @@ $L['Total'] = 'Total';
 
 // summary rows
 $L['This hour'] = 'Cette heure';
-$L['This day'] = 'Aujourd\' hui';
+$L['This day'] = 'Aujourd\'hui';
 $L['This month'] = 'Ce mois';
 $L['All time'] = 'Tout temps';
 
 // graph text
-$L['Traffic data for'] = 'Traffic de donnée pour :';
+$L['Traffic data for'] = 'Trafic de données pour';
 $L['bytes in'] = 'bytes entrants';
 $L['bytes out'] = 'bytes sortants';
 
@@ -34,6 +42,6 @@ $L['datefmt_days'] = '%d %B';
 $L['datefmt_days_img'] = '%d';
 $L['datefmt_months'] = '%B %Y';
 $L['datefmt_months_img'] = '%b';
-$L['datefmt_hours'] = '%Hh%M';
+$L['datefmt_hours'] = '%Hh';
 $L['datefmt_hours_img'] = '%H';
 $L['datefmt_top'] = '%d %B %Y';

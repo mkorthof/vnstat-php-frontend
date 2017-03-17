@@ -1,5 +1,9 @@
 ﻿<?php
 
+// live monitoring
+$L['Reception'] = 'Recepcia';
+$L['Transmission'] = 'Prenos';
+
 // sidebar labels
 $L['summary'] = 'zhrnutie';
 $L['hours'] = 'hodiny';
@@ -34,6 +38,6 @@ $L['datefmt_days'] = '%d %B';
 $L['datefmt_days_img'] = '%d';
 $L['datefmt_months'] = '%B %Y';
 $L['datefmt_months_img'] = '%b';
-$L['datefmt_hours'] = '%l%p';
+$L['datefmt_hours'] = '%l%P';
 $L['datefmt_hours_img'] = '%l';
 $L['datefmt_top'] = '%d %B %Y';

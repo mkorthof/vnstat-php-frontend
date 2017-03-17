@@ -1,18 +1,12 @@
 <?php
 
-// live monitoring
-$L['Reception'] = 'Reception';
-$L['Transmission'] = 'Transmission';
-$L['Live monitoring started on interface '] = 'Live monitoring started on interface ';
-$L['Live monitoring not running on interface '] = 'Live monitoring not running on interface ';
-$L['Start Live'] = 'Start Live';
-$L['Stop Live'] = 'Stop Live';
+$L['Page top'] = '<br/><br/><br/>';
 
 // sidebar labels
-$L['summary'] = 'summary';
-$L['hours'] = 'hours';
-$L['days'] = 'days';
-$L['months'] = 'months';
+$L['summary'] = 'Summary';
+$L['hours'] = 'Hours';
+$L['days'] = 'Days';
+$L['months'] = 'Months';
 
 // main table headers
 $L['Summary'] = 'Summary';
@@ -33,16 +27,24 @@ $L['This month'] = 'This month';
 $L['All time'] = 'All time';
 
 // graph text
-$L['Traffic data for'] = 'Traffic data for';
+$L['Traffic data for'] = 'vnStat network traffic statistics ';
+$L['Traffic data for svg'] = 'traffic data';
 $L['bytes in'] = 'bytes in';
 $L['bytes out'] = 'bytes out';
 
-// date formats
 $L['datefmt_days'] = '%d %B';
 $L['datefmt_days_img'] = '%d';
 $L['datefmt_months'] = '%B %Y';
 $L['datefmt_months_img'] = '%b';
-$L['datefmt_hours'] = '%l%P';
-$L['datefmt_hours_img'] = '%l';
+$L['datefmt_hours'] = '%H:%M';
+$L['datefmt_hours_img'] = '%H';
 $L['datefmt_top'] = '%d %B %Y';
+
+// live monitoring
+$L['Reception'] = 'Download';
+$L['Transmission'] = 'Upload';
+$L['Live monitoring started on interface '] = 'Live monitoring started on interface ';
+$L['Live monitoring not running on interface '] = 'Live monitoring not running on interface ';
+$L['Start Live'] = 'Start Realtime Monitor';
+$L['Stop Live'] = 'Stop Realtime Monitor';
 

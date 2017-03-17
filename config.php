@@ -28,21 +28,24 @@
     // edit these to reflect your particular situation
     //
     $locale = 'en_US.UTF-8';
-    $language = 'nl';
+    //$language = 'nl';
+    $language = 'cust';
 
     // Set local timezone
     date_default_timezone_set("Europe/Amsterdam");
 
     // list of network interfaces monitored by vnStat
-    $iface_list = array('eth0', 'sixxs');
+    //$iface_list = array('eth0', 'sixxs');
+    $iface_list = array('eth0');
 
     //
     // optional names for interfaces
     // if there's no name set for an interface then the interface identifier
     // will be displayed instead
     //
-    $iface_title['eth0'] = 'Internal';
-    $iface_title['sixxs'] = 'SixXS IPv6';
+    //$iface_title['eth0'] = 'Internal';
+    //$iface_title['sixxs'] = 'SixXS IPv6';
+    //$iface_title['eth0'] = 'Default';
 
     //
     // There are two possible sources for vnstat data. If the $vnstat_bin
@@ -74,9 +77,39 @@
     define('SVG_FONT', 'Verdana');
 
     // Default theme
-    define('DEFAULT_COLORSCHEME', 'light');
-    
+    //define('DEFAULT_COLORSCHEME', 'light');
+    define('DEFAULT_COLORSCHEME', 'dark2');
+
     // SVG Depth scaling factor
-    define('SVG_DEPTH_SCALING', 1);
+    //define('SVG_DEPTH_SCALING', 1);
+    define('SVG_DEPTH_SCALING', 0);
+
+    // Live Monitoring. Set to True to enable, False to disable
+    $live_monitor = True;
+
+    // templating for inactive Live Monitoring
+    // usable tags are : {link}, {text}
+    $liveStoppedTemplate = '<center><br/><b>{link}</b><br/><br/>{text}<br/></br></center>';
+
+    // templating for starting Live Monitoring
+    // usable tags are : {text}
+    $liveStartingTemplate = '<center><br/>{text}<br/></br></center>';
+    
+    // templating for active Live Monitoring
+    // usable tags are : {link},
+    //                   {rxText}, {rxRate}, {rxRateUnit}, {rxSum}, {rxSumUnit},
+    //                   {txText}, {txRate}, {txRateUnit}, {txSum}, {txSumUnit}
+    $liveRunningTemplate = '
+        <center>
+        <br/><b>{link}</b><br/>
+        <br/>
+        <b>{rxText}</b>
+        <br/>{rxRate} {rxRateUnit} - {rxSum} {rxSumUnit}<br/>
+        <br/>
+        <b>{txText}</b>
+        <br/>{txRate} {txRateUnit} - {txSum} {txSumUnit}<br/>
+	<br/>
+        </center>
+    ';
 
 ?>
