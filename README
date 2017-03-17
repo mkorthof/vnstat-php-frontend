@@ -51,7 +51,7 @@ NOTE:
   
 CHANGES:
 
-- 170219 merged "VNStat Live Monitoring" by (https://github.com/bjd/vnstat-php-frontend/issues/5)
+- 170219 merged "VNStat Live Monitoring" by nadzree (https://github.com/bjd/vnstat-php-frontend/issues/5)
 - 170219 added option to config.php to turn live monitor on/off
 - 170219 added modified dark theme: "dark2"
 - 170219 added language file "cust.php" (en) whichm uses $L['Page top']
