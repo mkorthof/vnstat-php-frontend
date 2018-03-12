@@ -91,10 +91,10 @@
         {
             $ui++;
             $scale = $scale / 1024;
-        }
 
-        if ($custom_size && $units[$ui] == $byte_notation) {
-            break;
+            if ($custom_size && $units[$ui] == $byte_notation) {
+                break;
+            }
         }
 
         return sprintf("%0.2f %s", ($kb/$scale),$units[$ui]);
